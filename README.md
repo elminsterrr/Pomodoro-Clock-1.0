@@ -1,5 +1,5 @@
 Created by: Elminster White - elminsterthewhite@gmail.com
 
-A Pen created at CodePen.io. You can find this one at https://codepen.io/ElminsterWhite/full/XNGVVX
+[See it live on GitHub pages.](https://elminsterrr.github.io/Pomodoro-Clock-1.0/)
 
-Working example was created at CodePen.io.
+This is Pomodoro Clock project that I made from FreeCodeCamp.
