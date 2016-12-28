@@ -110,14 +110,19 @@ p {
   font-family: 'Rubik', monospace;
 }
 
-.display__minusplus,
+.display__minusplus {
+  font-size: 1.70rem;
+  color: white;
+  font-family: 'Rubik', monospace;
+  padding: 10px;  
+}
+
 .display__end-time {
   font-size: 2rem;
   color: white;
   font-family: 'Rubik', monospace;
   padding: 10px;  
 }
-
 
 .settings__breakButton,
 .settings__workButton {
