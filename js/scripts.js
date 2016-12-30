@@ -48,7 +48,6 @@
       // Display it
       displayTimeLeft(secondsLeft);
     }
-    
     countdown = setInterval(timeCalc, 1000);
   }
 
