@@ -178,5 +178,4 @@
   breakSettings.forEach(button => button.addEventListener("click", changeBreakSettings));
   workSettings.forEach(button => button.addEventListener("click", changeWorkSettings));
   buttonMain.addEventListener("click", startAndReset);
-
 }());
