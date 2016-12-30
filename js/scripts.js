@@ -4,7 +4,7 @@
 "use strict";
 
 // Code wrapped in a closure to avoid global variables
-(function() {
+(function () {
   let countdown;
   let timeIsRunnig = false;
   let actionTypeSwitch = "Work";
