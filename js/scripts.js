@@ -42,6 +42,7 @@
       const secondsLeft = Math.round((future - Date.now()) / 1000);
       // Check if we should stop it
       if (secondsLeft < 0) {
+        clearInterval(timeCalc);
         clearInterval(countdown);
         return;
       }
