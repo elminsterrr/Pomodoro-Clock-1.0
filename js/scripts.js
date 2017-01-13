@@ -19,8 +19,8 @@
   const workValue = document.querySelector("#valueWork");
   const buttonMain = document.querySelector("#buttonMain");
 
-  let workValueSettings = 25; // Default work session value in min
-  let breakValueSettings = 5; // Default break session value in min
+  let workValueSettings = 1; // Default work session value in min
+  let breakValueSettings = 1; // Default break session value in min
 
   workValue.textContent = workValueSettings + ' min';
   breakValue.textContent = breakValueSettings + ' min';
@@ -44,7 +44,8 @@
       if (secondsLeft < 0) {
         clearInterval(timeCalc);
         clearInterval(countdown);
-        return;
+        displayTimeLeft(secondsLeft);
+        //return;
       }
       // Display it
       displayTimeLeft(secondsLeft);
