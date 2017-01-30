@@ -19,7 +19,7 @@ p {
   color: 2dcf9c;
 }
 
-#buttonMain {
+.buttonMain {
   background: -webkit-linear-gradient(315deg, #B8D087, #00996D);
   background: linear-gradient(135deg, #B8D087, #00996D);
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.8), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
@@ -38,7 +38,7 @@ p {
   justify-content: center;
 }
 
-.box0 {
+.headline {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +51,7 @@ p {
   color: aliceblue;
 }
 
-.box1 {
+.alignVerticallyThisBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +59,7 @@ p {
   background: transparent;
 }
 
-.box2 { 
+.settings { 
   background: #232326;
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.8), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
   border-bottom: 1px solid black;
@@ -69,7 +69,7 @@ p {
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.8), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 
-.box4 {
+.mainDisplay {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +81,7 @@ p {
   border-bottom: 1px solid black;
 }
 
-.box5 { 
+.lowerDisplay { 
   background: #232326;
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.8), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
@@ -93,7 +93,7 @@ p {
   justify-content: center;
 }
 
-.display__time-left {
+.display-timeLeft {
   font-weight: 100;
   font-size: 4rem;
   margin: 0;
@@ -104,28 +104,28 @@ p {
   -webkit-text-fill-color: transparent
 }
 
-.display__info {
+.display-info {
   font-size: 1.5rem;
   color: white;
   font-family: 'Rubik', monospace;
 }
 
-.display__minusplus {
+.display-minusPlus {
   font-size: 1.70rem;
   color: white;
   font-family: 'Rubik', monospace;
   padding: 10px;  
 }
 
-.display__end-time {
+.display-endTime {
   font-size: 2rem;
   color: white;
   font-family: 'Rubik', monospace;
   padding: 10px;  
 }
 
-.settings__breakButton,
-.settings__workButton {
+.settings-breakButton,
+.settings-workButton {
   background: none;
   border: none;
   cursor: pointer;

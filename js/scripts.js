@@ -9,15 +9,15 @@
   let timeIsRunnig = false;
   let actionTypeSwitch = "Work";
 
-  const timerDisplay = document.querySelector(".display__time-left");
-  const infoDisplay = document.querySelector(".display__info");
-  const endTime = document.querySelector(".display__end-time");
+  const timerDisplay = document.querySelector(".display-timeLeft");
+  const infoDisplay = document.querySelector(".display-info");
+  const endTime = document.querySelector(".display-endTime");
   const buttons = document.querySelectorAll("[data-time]");
-  const breakSettings = document.querySelectorAll(".settings__breakButton");
-  const workSettings = document.querySelectorAll(".settings__workButton");
-  const breakValue = document.querySelector("#valueBreak");
-  const workValue = document.querySelector("#valueWork");
-  const buttonMain = document.querySelector("#buttonMain");
+  const breakSettings = document.querySelectorAll(".settings-breakButton");
+  const workSettings = document.querySelectorAll(".settings-workButton");
+  const breakValue = document.querySelector(".valueBreak");
+  const workValue = document.querySelector(".valueWork");
+  const buttonMain = document.querySelector(".buttonMain");
 
   let workValueSettings = 25; // Default work session value in min
   let breakValueSettings = 5; // Default break session value in min
