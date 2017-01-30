@@ -19,6 +19,25 @@ p {
   color: 2dcf9c;
 }
 
+.icons {
+  display: flex;
+}
+
+.coffee-icon,
+.briefcase-icon {
+  color: #ffffff;
+  width: 50%;
+  margin-top: 11px;
+}
+
+.coffee-settings,
+.briefcase-settings {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
 .buttonMain {
   background: -webkit-linear-gradient(315deg, #B8D087, #00996D);
   background: linear-gradient(135deg, #B8D087, #00996D);
@@ -59,14 +78,10 @@ p {
   background: transparent;
 }
 
-.settings { 
+.settings {
   background: #232326;
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.8), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
   border-bottom: 1px solid black;
-}
-.box3 { 
-  background: #232326;
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.8), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 
 .mainDisplay {
@@ -114,7 +129,7 @@ p {
   font-size: 1.70rem;
   color: white;
   font-family: 'Rubik', monospace;
-  padding: 10px;  
+  padding: 0px 10px;
 }
 
 .display-endTime {
