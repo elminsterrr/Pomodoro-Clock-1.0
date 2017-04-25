@@ -1,10 +1,10 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 html {
   box-sizing: border-box;
   font-size: 10px;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
 }
 
 body {
@@ -150,4 +150,6 @@ p {
   padding: 1rem;
 }
 
-button:focus {outline:0;};
+button:focus {
+  outline: 0;
+}
