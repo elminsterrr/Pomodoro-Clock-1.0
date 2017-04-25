@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Pomodoro Clock v.1.0 -->
+    <!-- Created by: Elminster White - elminsterthewhite@gmail.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pomodoro Clock</title>
+    <!-- Add encoded favicon -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQBBcXFxEhISEUMTExDBoaGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBgYJUFBQRZycm6OtrazNpaWl1rCwsMKdnZyEZGRkJmJiYgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFBQUSjIyMkKenpvjCwsH/x8fF/6Sjov+/v77/p6em/7e3tuCWlpZSenp6AwAAAAAAAAAAAAAAAAAAAAAGBgYIiIiIjL29vP/X1tX/zMvK/9zb2P+2tbP/29vY/6Sko//AwL7/vr697Z+fn0OGhoYAAAAAAAAAAAAAAAAAQ0NDPaenpvXLy8r/5OPi/+Pi3//l5OD/5ePf/+Pi3v/a2db/1NPR/5ycm/+/vr6+n5+fEAAAAAAAAAAAEBAQApOTk5S+vr3/29rZ/+bl4//r6uf/7Orm/+zq5v/p6OP/5OPf/7++vP/Kysj/vb28+7W1tTYAAAAAAAAAABQUFAypqam7vb28/9nY1//q6eb/7u3p/+/t6P+1tLH/7evm/+jm4v/g39z/zMzK/7q5uP/FxcVkAAAAAAAAAAAiIiIOpKSjwK6trf/X19b/6ejl/+zr5//S0c3/ZGNh/6SjoP+4t7T/0tHO/7i3tv+ampn/y8vLawAAAAAAAAAAMDAwBaioqKfb29r/6+rp/+rp5//s6+f/7uzn/6Sjn//r6uX/5uTg/93c2f/W1tT/ubi4/9LS0UkAAAAAAAAAAAAAAACJiYldxMTD/srJyP/Y2Nb/6Ofk/+fm4v+xsK7/5eTg/+Dg3P/Av73/nZyb/8PDw9vb29sdAAAAAAAAAAAAAAAAVFRUFri3t7/V1dT/39/d/8jIxv/g39z/vb26/97d2v/JyMb/z8/O/7i4t/3V1dVy3t7eAgAAAAAAAAAAAAAAAGFhYQCBgYExwMDA0bGxr//Lysn/zMzK/5STkv/S0tD/np2c/7a2tfzU1NOT4+PjEAAAAAAAAAAAAAAAAAAAAAAAAAAAdHR0AIyMjCW8vLyVwcHB5Lq6uf+fn57/vLy7+snJyczW1tZm4+PjDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+fBqurqx++vr48yMjISdHR0TDa2toV19fXAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAPwfAADwBwAA4AMAAMABAADAAQAAgAEAAIABAACAAQAAgAEAAMABAADAAQAAwAMAAOAHAAD4DwAA//8AAA==" rel="icon" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oxygen|Rubik:300">
+    <!-- Font Awesome -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<head>
-  <!-- Pomodoro Clock v.1.0 -->
-  <!-- Created by: Elminster White - elminsterthewhite@gmail.com -->
-  <meta charset="UTF-8">
-  <title>Pomodoro Clock</title>
-  <!-- Font Awesome -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Add encoded favicon -->
-  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQBBcXFxEhISEUMTExDBoaGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBgYJUFBQRZycm6OtrazNpaWl1rCwsMKdnZyEZGRkJmJiYgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFBQUSjIyMkKenpvjCwsH/x8fF/6Sjov+/v77/p6em/7e3tuCWlpZSenp6AwAAAAAAAAAAAAAAAAAAAAAGBgYIiIiIjL29vP/X1tX/zMvK/9zb2P+2tbP/29vY/6Sko//AwL7/vr697Z+fn0OGhoYAAAAAAAAAAAAAAAAAQ0NDPaenpvXLy8r/5OPi/+Pi3//l5OD/5ePf/+Pi3v/a2db/1NPR/5ycm/+/vr6+n5+fEAAAAAAAAAAAEBAQApOTk5S+vr3/29rZ/+bl4//r6uf/7Orm/+zq5v/p6OP/5OPf/7++vP/Kysj/vb28+7W1tTYAAAAAAAAAABQUFAypqam7vb28/9nY1//q6eb/7u3p/+/t6P+1tLH/7evm/+jm4v/g39z/zMzK/7q5uP/FxcVkAAAAAAAAAAAiIiIOpKSjwK6trf/X19b/6ejl/+zr5//S0c3/ZGNh/6SjoP+4t7T/0tHO/7i3tv+ampn/y8vLawAAAAAAAAAAMDAwBaioqKfb29r/6+rp/+rp5//s6+f/7uzn/6Sjn//r6uX/5uTg/93c2f/W1tT/ubi4/9LS0UkAAAAAAAAAAAAAAACJiYldxMTD/srJyP/Y2Nb/6Ofk/+fm4v+xsK7/5eTg/+Dg3P/Av73/nZyb/8PDw9vb29sdAAAAAAAAAAAAAAAAVFRUFri3t7/V1dT/39/d/8jIxv/g39z/vb26/97d2v/JyMb/z8/O/7i4t/3V1dVy3t7eAgAAAAAAAAAAAAAAAGFhYQCBgYExwMDA0bGxr//Lysn/zMzK/5STkv/S0tD/np2c/7a2tfzU1NOT4+PjEAAAAAAAAAAAAAAAAAAAAAAAAAAAdHR0AIyMjCW8vLyVwcHB5Lq6uf+fn57/vLy7+snJyczW1tZm4+PjDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn5+fBqurqx++vr48yMjISdHR0TDa2toV19fXAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAPwfAADwBwAA4AMAAMABAADAAQAAgAEAAIABAACAAQAAgAEAAMABAADAAQAAwAMAAOAHAAD4DwAA//8AAA==" rel="icon" type="image/x-icon">
-</head>
-
-<body>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oxygen|Rubik:300">
-  <div class="audio">
-    <audio data-sound="backToWork" src="sounds/backToWork.wav"></audio>
-    <audio data-sound="workDone" src="sounds/workDone.wav"></audio>
-  </div>
-  <div class="container">
-    <div class="alignVerticallyThisBox">
-      <div class="timer">
-        <div class="headline"> Pomodoro Clock </div>
-        <div class="mainDisplay">
-          <p class="display-timeLeft"></p>
-          <p class="display-info"></p>
-        </div>
-        <div class="settings">
-          <div class="icons">
-            <div class="coffee-icon"><i class="fa fa-coffee fa-2x" aria-hidden="true"></i></div>
-            <div class="briefcase-icon"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i></div>
+  <body>
+    <div class="audio">
+      <audio data-sound="backToWork" src="sounds/backToWork.wav"></audio>
+      <audio data-sound="workDone" src="sounds/workDone.wav"></audio>
+    </div>
+    <div class="container">
+      <div class="alignVerticallyThisBox">
+        <div class="timer">
+          <div class="headline"> Pomodoro Clock </div>
+          <div class="mainDisplay">
+            <p class="display-timeLeft"></p>
+            <p class="display-info"></p>
           </div>
-          <div class="keys">
-            <div class="coffee-settings">
-              <div class="key">
-                <button data-settings="-1" class="settings-breakButton">-</button>
+          <div class="settings">
+            <div class="icons">
+              <div class="coffee-icon"><i class="fa fa-coffee fa-2x" aria-hidden="true"></i></div>
+              <div class="briefcase-icon"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i></div>
+            </div>
+            <div class="keys">
+              <div class="coffee-settings">
+                <div class="key">
+                  <button data-settings="-1" class="settings-breakButton">-</button>
+                </div>
+                <p class="display-minusPlus valueBreak"></p>
+                <div class="key">
+                  <button data-settings="+1" class="settings-breakButton">+</button>
+                </div>
               </div>
-              <p class="display-minusPlus valueBreak"></p>
-              <div class="key">
-                <button data-settings="+1" class="settings-breakButton">+</button>
+              <div class="briefcase-settings">
+                <div class="key">
+                  <button data-settings="-1" class="settings-workButton">-</button>
+                </div>
+                <p class="display-minusPlus valueWork"></p>
+                <div class="key">
+                  <button data-settings="+1" class="settings-workButton">+</button>
+                </div>
               </div>
             </div>
-            <div class="briefcase-settings">
-              <div class="key">
-                <button data-settings="-1" class="settings-workButton">-</button>
-              </div>
-              <p class="display-minusPlus valueWork"></p>
-              <div class="key">
-                <button data-settings="+1" class="settings-workButton">+</button>
-              </div>
-            </div>
           </div>
-        </div>
-        <div class="lowerDisplay">
-          <p class="display-endTime"></p>
-        </div>
-        <div class="startAndResetButton">
-          <button class="buttonMain">START</button>
+          <div class="lowerDisplay">
+            <p class="display-endTime"></p>
+          </div>
+          <div class="startAndResetButton">
+            <button class="buttonMain">START</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="js/scripts.js"></script>
-</body>
-
+    <script src="js/scripts.js"></script>
+  </body>
+  
 </html>
