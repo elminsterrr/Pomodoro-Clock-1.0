@@ -113,7 +113,7 @@
     const minutes = parseFloat(Math.floor(sec / 60));
     const remainderMinutes = parseFloat(minutes % 60);
     const remainderSeconds = parseFloat(sec % 60);
-    console.log(hours, remainderMinutes, remainderSeconds);
+    // console.log(hours, remainderMinutes, remainderSeconds);
     
     // Play sound when timer gets to 0
     if (parseFloat(sec) === 0) {
