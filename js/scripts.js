@@ -24,7 +24,7 @@
 
   workValue.textContent = workValueSettings + ' min';
   breakValue.textContent = breakValueSettings + ' min';
-  
+
   timerDisplay.textContent = `${ workValueSettings}:00`;
   infoDisplay.textContent = "Are you ready?";
   endTime.textContent = "Press START";
@@ -77,7 +77,7 @@
 
   function startAndReset() {
     let name = "START";
-    if (timeIsRunnig === false) {
+    if (!timeIsRunnig) {
       timeIsRunnig = true;
       name = "RESET";
       this.innerHTML = name;
@@ -114,7 +114,7 @@
     const remainderMinutes = parseFloat(minutes % 60);
     const remainderSeconds = parseFloat(sec % 60);
     // console.log(hours, remainderMinutes, remainderSeconds);
-    
+
     // Play sound when timer gets to 0
     if (parseFloat(sec) === 0) {
       if (actionTypeSwitch === "Work") {
